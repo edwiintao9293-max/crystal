@@ -1,0 +1,11 @@
+{
+  "name": "crystal-customization",
+  "private": true,
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "dev:web": "pnpm --filter @crystal/web dev",
+    "dev:admin": "pnpm --filter @crystal/admin dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck"
+  }
+}
