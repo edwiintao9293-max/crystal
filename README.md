@@ -22,8 +22,11 @@ pnpm dev:web
 ```bash
 python3 -m venv services/api/.venv
 services/api/.venv/bin/pip install -r services/api/requirements.txt
+cp .env.example services/api/.env
 services/api/.venv/bin/uvicorn app.main:app --reload --app-dir services/api --port 8000
 ```
+
+API 会自动读取 `services/api/.env`。请把 DeepSeek 密钥只写入该文件；该文件已被 Git 忽略，不会提交到仓库。
 
 后台：
 

@@ -9,11 +9,13 @@ from pathlib import Path
 from typing import Literal, Optional
 
 import httpx
+from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 ROOT = Path(__file__).resolve().parents[1]
+load_dotenv(ROOT / ".env")
 DB_PATH = Path(os.getenv("CRYSTAL_DB_PATH", ROOT / "crystal.db"))
 
 
